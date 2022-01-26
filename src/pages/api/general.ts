@@ -108,13 +108,14 @@ const getStyle = (
   img {
     width: ${query.logoWidth}px;
     object-fit: cover;
+    border-radius: 50%;
     ${query.logoHeight && `height: ${query.logoHeight}px`}
   }
 
   h1 {
-    font-size: 1.2rem;
-    line-height: 1.1;
-    margin-top: 1.3rem;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-top: 1.5rem;
   }
 
   h3 {
@@ -124,9 +125,10 @@ const getStyle = (
   }
   
   .description {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     margin-top: 1rem;
+    max-width: 34rem;
     color: ${query.theme === 'dark' ? '#D1D5DB' : '#1F2937'};
   }
 </style>
