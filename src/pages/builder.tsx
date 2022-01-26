@@ -36,7 +36,7 @@ export default function BuildPage() {
     const { ogType, ...rest } = formData;
     const qurl = queryString.stringifyUrl(
       {
-        url: `http://localhost:3000/api/${ogType}`,
+        url: `http://og.apsyadira.com/api/${ogType}`,
         query: { ...rest },
       },
       {
