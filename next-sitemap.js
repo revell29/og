@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://og.thcl.dev/',
+  siteUrl: 'https://og.apsyadira.com/',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [{ userAgent: '*', allow: '/' }],

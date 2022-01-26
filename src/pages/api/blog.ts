@@ -26,7 +26,7 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
       const query = {
         siteName: siteName ?? 'Site Name',
         description: description ?? 'Description',
-        logo: logo ?? 'https://og.thcl.dev/images/logo.jpg',
+        logo: logo ?? 'https://towedd.com/favicon/logo.png',
         theme: theme ?? 'dark',
         templateTitle,
         logoWidth: logoWidth ?? '100',
@@ -43,19 +43,15 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
             <div class="container">
               <div class="split">
                 <div class="left">
-                  <h3 class="link">
-                    theodorusclarence.com/blog
-                  </h3>
                   <h1 class="title">
                     <span class="gradient">
                       ${query.templateTitle ?? 'Blog Title'}
                     </span>
                   </h1>
                   <div class="social">
-                    <img class="social_img" src="https://res.cloudinary.com/theodorusclarence/image/upload/c_fill,g_auto:face,h_1000,w_1000/v1636335597/theodorusclarence/clarence_gu3cxx.jpg">
                     <div class="social_info">
-                      <p class="name">Theodorus Clarence</p>
-                      <p class="twitter">@th_clarence</p>
+                      <p class="name">TOWEDD.COM</p>
+                      <p class="twitter">@towedd.co</p>
                     </div>
                   </div>
                 </div>
@@ -113,7 +109,7 @@ const getStyle = (query: Record<keyof typeof QueryEnum, string | string[]>) => `
     color: ${query.theme === 'dark' ? 'white' : 'black'};
 
     text-align: center;
-    padding: 4rem 3rem;
+    padding: 0 3rem;
   }
 
   h1 {
@@ -130,7 +126,7 @@ const getStyle = (query: Record<keyof typeof QueryEnum, string | string[]>) => `
   }
 
   .gradient {
-    background-image: linear-gradient(to top right, #00e887, #00e0f3);
+    background-image: linear-gradient(to top right, #B232FF, #410DD7);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -175,12 +171,13 @@ const getStyle = (query: Record<keyof typeof QueryEnum, string | string[]>) => `
   .twitter {
     font-size: 1.3rem;
     margin-top: 0.1rem;
-    color: #F3F4F6;
+    color: #000;
   }
   .right img {
     height: 83vh;
     width: auto;
     display: block;
+    object-fit: cover;
   }
 </style>
 `;

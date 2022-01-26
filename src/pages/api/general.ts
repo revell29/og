@@ -24,11 +24,11 @@ export default withOGImage<'query', keyof typeof GeneralQueryEnum>({
       const query = {
         siteName: siteName ?? 'Site Name',
         description: description ?? 'Description',
-        logo: logo ?? 'https://og.thcl.dev/images/logo.jpg',
+        logo: logo ?? 'https://towedd.com/favicon/logo.png',
         theme: theme ?? 'dark',
         templateTitle,
-        logoWidth: logoWidth ?? '100',
-        logoHeight,
+        logoWidth: logoWidth ?? '450',
+        logoHeight: logoHeight ?? '450',
       };
 
       return `
@@ -81,6 +81,13 @@ const getStyle = (
 
   body {
     font-family: 'Inter', sans-serif;
+    background-image: radial-gradient(circle at 25px 25px, lightgray 2%, transparent 0%), radial-gradient(circle at 75px 75px, lightgray 2%, transparent 0%);
+    background-size: 100px 100px;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 
   .container {
@@ -92,7 +99,6 @@ const getStyle = (
     justify-content: center;
     align-items: center;
 
-    background: ${query.theme === 'dark' ? '#222' : '#fff'};
     color: ${query.theme === 'dark' ? 'white' : 'black'};
 
     text-align: center;
@@ -101,6 +107,7 @@ const getStyle = (
 
   img {
     width: ${query.logoWidth}px;
+    object-fit: cover;
     ${query.logoHeight && `height: ${query.logoHeight}px`}
   }
 
