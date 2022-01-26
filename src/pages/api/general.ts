@@ -112,20 +112,19 @@ const getStyle = (
   }
 
   h1 {
-    font-size: 1.5rem;
-    font-size: 3.5rem;
+    font-size: 1.2rem;
     line-height: 1.1;
-    margin-top: 1.5rem;
+    margin-top: 1.3rem;
   }
 
   h3 {
     margin-top: 0.5rem;
     color: ${query.theme === 'dark' ? '#E5E7EB' : '#374151'};
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   
   .description {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     line-height: 1.5;
     margin-top: 1rem;
     color: ${query.theme === 'dark' ? '#D1D5DB' : '#1F2937'};
